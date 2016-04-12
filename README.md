@@ -1,0 +1,1 @@
+# zbx_blockdevices_template

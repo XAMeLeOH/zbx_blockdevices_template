@@ -9,7 +9,7 @@ import sys
 
 
 LSBLKPATH='/bin/lsblk'
-LSBLKARGS='-rdno NAME,RM'
+LSBLKARGS='-rdno NAME,TYPE,SIZE'
 
 
 def main():
@@ -21,10 +21,12 @@ def main():
         if line == "":
             continue
         fields = line.split(" ")
-        if len(fields) != 2:
-            raise Exception("Unknown fields in lsblk output")
-        name, rm = fields
-        if int(rm) != 0:
+        if len(fields) != 3:
+            continue
+        name, tp, sz = fields
+        if tp != "disk":
+            continue
+        if sz == "":
             continue
         data.append({
             "{#DEVINDEX}": i,
@@ -36,5 +38,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-

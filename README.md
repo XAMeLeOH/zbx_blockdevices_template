@@ -31,7 +31,8 @@ This is why the template contains both: bytes and sectors items.
 chmod a+x zbx_blockdevices.py
 ```
 
-3) Put `userparameter_blockdev.conf` into `/etc/zabbix/zabbix_agentd.d` directory or add it's 
+3) Put `userparameter_blockdev.conf` into `/etc/zabbix/zabbix_agentd.d`
+(or `/etc/zabbix/zabbix_agentd.conf.d`) directory or add it's
 content to the agent's configuration file `/etc/zabbix/zabbix_agentd.conf`
 
 4) Import `zbx_blockdev_template.xml` into zabbix in Tepmplate section web gui

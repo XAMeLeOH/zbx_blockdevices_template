@@ -10,9 +10,13 @@ Linux 2.6 |      X       |    —    |     X
 FreeBSD   |      X       |    X    |     —
 ```
 
+This is why the template contains both: bytes and sectors items.
+
+
 ## System requirements
 
 - lsblk (for Ubuntu and Debian: `apt-get install util-linux`)
+
 
 ## Installation
 
